@@ -6,7 +6,10 @@
     "chain": "hardhat node",
     "console": "hardhat console",
     "test": "hardhat test",
-    "verify": "hardhat verify"
+    "verify": "hardhat verify",
+    "test-mytoken": "hardhat test/MyToken.spec.ts",
+    "deploy-mytoken": "hardhat run scripts/MyToken.deploy.ts",
+    "verify-mytoken": "hardhat verify --contract contracts/MyToken.sol:MyToken"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "2.0.2",
@@ -28,5 +31,8 @@
     "ts-node": "10.1.0",
     "typechain": "5.1.2",
     "typescript": "4.3.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.2.0"
   }
 }
